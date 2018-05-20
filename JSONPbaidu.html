@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jsonp</title>
+        <link rel="stylesheet" href="css/baidu.css" />
+        <link rel="stylesheet" type="text/css" href="css/common.css"/>
+        <script src="js/jquery-1.11.1.js"></script>
+        <script>
+            function func(data){
+                var oUl = document.getElementById("ul");
+                var html = "";
+                if(data.s.length){
+                    oUl.style.display = "block";
+                    $("#ul").addClass("select");
+                    for(var i = 0 ; i < data.s.length ; i++){
+                        html += `<li><a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&tn=62095104_9_oem_dg&wd=${data.s[i]}">${data.s[i]}</a></li>`;
+                    }
+                    oUl.innerHTML = html;
+                }else{
+                    oUl.style.display = html;
+                }
+            }
+            $(function(){
+                $("#question").keyup(function(){
+                    if(this.value != ""){
+                        var oScript = document.createElement("script");
+                        oScript.src = `http://suggestion.baidu.com/su?wd=${this.value}&cb=func`;
+                        var jsbox = document.getElementById("jsbox")
+                        jsbox.appendChild(oScript);
+                    }else{
+                        var jsbox = document.getElementById("jsbox")
+                        $("#ul").css("display","none");
+                        $("#ul").attr("class","");
+                        jsbox.innerHTML = null;
+                    }
+                })
+                $("#question").click(function(){
+                	$(".import").css("borderColor","#3388ff");
+                })
+                $("#question").blur(function(){
+                    setTimeout(function(){
+                        $(".import").css("borderColor","#b8b8b8");
+                        $("#ul").css("display","none");
+                        // $("#ul").attr("class","");
+                    },3000);
+                })
+                $("#baidu").click(function(){
+                    var oText = document.getElementById("question").value;
+                    document.getElementById("baidu").href = `https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&tn=62095104_9_oem_dg&wd=${oText}`;
+                })
+            })
+        </script>
+    </head>
+    <body>
+		<div class="box">
+			<img src="img/dq_8fcf574f9211b1572202110e194a6ab3.gif"/>
+			<div class="import">
+				<input type="text" id="question"><a href="" id="baidu" style="display: block; text-align: center; width: 104px; background: #3388ff;float: left;border: 0; height: 42px;color: white;font-size: 15px;line-height: 42px;">百度一下</a>
+			</div>
+            <ul id="ul" style= "overflow:hidden;"></ul>
+            <div id="jsbox"></div>
+		</div>
+    </body>
+</html>
