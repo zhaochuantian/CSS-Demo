@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{perspective: 2000px;perspective-origin: center;background:url(img/home-black-bg.jpg);}
+    .box{width: 1300px;height: 700px;margin:50px auto;position: relative;transform-style: preserve-3d;background:url(img/earth-ignore.png) center center no-repeat;}
+        .box div{box-shadow:inset 3px 3px 80px 2px gold;}
+    /*.qian{width: 1000px;height: 200px;position:absolute;left:0;top:0;transform: translateZ(100px);border: 3px solid gold;}
+    .hou{width: 1000px;height: 200px;position: absolute;left:0;top:0;transform: translateZ(-100px);border: 3px solid gold;}
+    .shang{width: 1000px;height: 200px;position: absolute;left:0;top:0;transform: translateY(-100px) rotateX(90deg);border: 3px solid gold;}
+    .xia{width: 1000px;height: 200px;position: absolute;left:0;top:0;transform: translateY(100px) rotateX(90deg);}
+
+     .zuo{width: 200px;height: 200px;position: absolute;left:0;top:0;transform: translateX(-100px) rotateY(90deg);border: 3px solid gold;}
+    .you{width: 200px;height: 200px;position: absolute;left:0;top:0;transform: translateX(900px) rotateY(90deg);border: 3px solid gold;}*/
+    .box span{position: absolute;left: 253px;top: 91px; width: 3px;height: 2px;border-radius: 5px;background-color: white; transform:translateZ(-50px); }
+    .box a{position: absolute;left: 253px;top: 91px;height: 15px;transform:translateZ(-50px); color:white;text-decoration: none;}
+    .box span:nth-child(2n){transform:translateZ(50px)}
+    .box span:nth-child(3n){transform:translateZ(25px)}
+    .box span:nth-child(5n){transform:translateZ(-25px)}
+    .box span:nth-child(7n){transform:translateZ(-50px)}
+
+        </style>
+        <title>Document</title>
+        <script src="js/jquery-1.11.1.js"></script>
+        <script>
+            $(function(){
+                document.onmousemove = function(ev){
+                    var offsetX = ev.pageX - 3100;
+                    var offsetY = ev.pageY - 600;
+                    // var oBody = document.getElementsByTagName("body");
+                    $("body").css("perspectiveOriginX", - offsetX * 7 / 3).css("perspectiveOriginY", - offsetY * 5 / 3);
+                }
+
+                $("span").each(function(i,elem){
+                    $(elem).css("left", Math.random() * 1300).css("top",Math.random() * 200 + 250)
+                })
+                // var Ospan = document.getElementsByTagName("span");
+                // Ospan[1].style.backgroundColor = "black";
+            })
+        </script>
+    </head>
+    <body>
+        <div class="box">
+        <a href="https://www.baidu.com/s?ie=utf-8&f=3&rsv_bp=1&tn=baidu&wd=%E5%A4%A7%E9%99%86%E6%B3%95%20%E6%B5%B7%E6%B4%8B%E6%B3%95&oq=%25E5%259C%25A3%25E5%25A2%259F&rsv_pq=c64caa2c00017f80&rsv_t=4979SFF2D5etmmWPnR5c5cOG0jWbTBLMZhDo2Kf%2FxIapu09T3KenQ79CPF8&rqlang=cn&rsv_enter=1&rsv_sug3=8&rsv_sug1=5&rsv_sug7=100&rsv_sug2=1&prefixsug=%25E5%25A4%25A7%25E9%2599%2586%25E6%25B3%2595&rsp=3&inputT=5864&rsv_sug4=5863">百度</a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- <div class="qian">
+
+            </div>
+            <div class="hou">
+
+            </div>
+            <div class="zuo">
+
+            </div>
+            <div class="you">
+
+            </div>
+            <div class="shang">
+
+            </div>
+            <div class="xia">
+
+            </div> -->
+        </div>
+    </body>
+</html>
